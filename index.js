@@ -32,7 +32,8 @@ function getRandomStatus() {
 }
 
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/service-worker.js")
+  const prefix = window.location.host.startsWith("localhost")? "" : "/car";
+  navigator.serviceWorker.register(prefix + "/service-worker.js")
       .then(function (registration) {
           console.log("Service Worker registered with scope:", 
                        registration.scope);

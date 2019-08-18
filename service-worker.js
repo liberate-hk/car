@@ -6,9 +6,9 @@ const URLS_CACHE_ONLY = [
 ];
 
 const URLS_OVER_NETWORK_WITH_CACHE_FALLBACK = [
-  `${baseUrl}/index.js`,
-  `${baseUrl}/index.html`,
-  `${baseUrl}/carplate.json`,
+  `./index.js`,
+  `./index.html`,
+  `./carplate.json`,
 ];
 
 self.addEventListener("install", function (event) {
