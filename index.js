@@ -2,7 +2,7 @@ function onButtonClick() {
   const text = document.getElementById("carplate").value;
   if(!text) return;
   document.getElementById("submit").disabled = true;
-  fetch('/carplate.json')
+  fetch('./carplate.json')
     .then(response => {
       if (response.status !== 200) {
         console.log('Looks like there was a problem. Status Code: ' +
