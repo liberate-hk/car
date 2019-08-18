@@ -1,3 +1,5 @@
+console.log(window.location);
+
 function onButtonClick() {
   const text = document.getElementById("carplate").value;
   if(!text) return;
