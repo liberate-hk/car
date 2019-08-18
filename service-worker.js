@@ -1,11 +1,14 @@
 const CACHE_NAME = "carplate-v1";
+// dirty way
+const baseUrl = self.location.host.startsWith("localhost") ? `http://${self.location.host}` : `https://${self.location.host}/car`;
+console.log(baseUrl);
 const URLS_CACHE_ONLY = [
 ];
 
 const URLS_OVER_NETWORK_WITH_CACHE_FALLBACK = [
-  "./index.js",
-  "./index.html",
-  "./carplate.json",
+  `${baseUrl}/index.js`,
+  `${baseUrl}/index.html`,
+  `${baseUrl}/carplate.json`,
 ];
 
 self.addEventListener("install", function (event) {
