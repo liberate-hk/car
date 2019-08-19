@@ -2,6 +2,8 @@ const CACHE_NAME = "carplate-v1";
 const URLS_CACHE_ONLY = [
 ];
 
+const prefix = self.location.host.startsWith("localhost") ? "" : "/car";
+
 const URLS_OVER_NETWORK_WITH_CACHE_FALLBACK = [
   `/index.js`,
   `/index.html`,
