@@ -28,7 +28,7 @@ self.addEventListener("install", function (event) {
 
 self.addEventListener("fetch", function (event) {
   const requestURL = new URL(event.request.url);
-  if (requestURL.pathname === '/') {
+  if (requestURL.pathname === '/' || requestURL.pathname === `${prefix}/`) {
     event.respondWith(getByNetworkFallingBackByCache(`${prefix}/index.html`));
   }
   else if(URLS_OVER_NETWORK_WITH_CACHE_FALLBACK.includes(requestURL.href) 
