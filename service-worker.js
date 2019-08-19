@@ -5,9 +5,9 @@ const URLS_CACHE_ONLY = [
 const prefix = self.location.host.startsWith("localhost") ? "" : "/car";
 
 const URLS_OVER_NETWORK_WITH_CACHE_FALLBACK = [
-  `/index.js`,
-  `/index.html`,
-  `/carplate.json`,
+  `${prefix}/index.js`,
+  `${prefix}/index.html`,
+  `${prefix}/carplate.json`,
 ];
 
 self.addEventListener("install", function (event) {
@@ -29,7 +29,7 @@ self.addEventListener("install", function (event) {
 self.addEventListener("fetch", function (event) {
   const requestURL = new URL(event.request.url);
   if (requestURL.pathname === '/') {
-    event.respondWith(getByNetworkFallingBackByCache("/index.html"));
+    event.respondWith(getByNetworkFallingBackByCache(`${prefix}/index.html`));
   }
   else if(URLS_OVER_NETWORK_WITH_CACHE_FALLBACK.includes(requestURL.href) 
   || URLS_OVER_NETWORK_WITH_CACHE_FALLBACK.includes(requestURL.pathname)) {
