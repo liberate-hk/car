@@ -1,3 +1,10 @@
+/*
+  Dont read my code POPO! 凸
+*/
+console.log("Dont fucking read my code");
+
+const serviceWorkerVer = 'v1';
+
 function onButtonClick() {
   const text = document.getElementById("carplate").value;
   if(!text) return;
@@ -13,7 +20,7 @@ function onButtonClick() {
     })
     .then(json => {
       console.log(json);
-      const find = json.find(item => item.id === text.trim());
+      const find = json.find(item => item.id.toLowerCase() === text.trim().toLowerCase());
       if(!find) {document.getElementById("result").innerHTML = getRandomStatus();}
       else {document.getElementById("result").innerHTML = "凶";}
     })

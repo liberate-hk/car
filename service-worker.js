@@ -7,7 +7,21 @@ const prefix = self.location.host.startsWith("localhost") ? "" : "/car";
 const URLS_OVER_NETWORK_WITH_CACHE_FALLBACK = [
   `${prefix}/index.js`,
   `${prefix}/index.html`,
+  `${prefix}/index.css`,
   `${prefix}/carplate.json`,
+  `${prefix}/info/info.html`,
+  `${prefix}/info/info.css`,
+  `${prefix}/info/images/honda-stepwgn-spada.jpg`,
+  `${prefix}/info/images/kia-cerato.jpg`,
+  `${prefix}/info/images/lexus-ct200h.jpg`,
+  `${prefix}/info/images/mazda-biante.jpg`,
+  `${prefix}/info/images/nissan-serena.jpg`,
+  `${prefix}/info/images/nissan-urvan.jpg`,
+  `${prefix}/info/images/peugeot-expert.jpg`,
+  `${prefix}/info/images/renault-fluence-ze.jpg`,
+  `${prefix}/info/images/toyota-hiace.jpg`,
+  `${prefix}/info/images/toyota-prius.jpg`,
+  `${prefix}/info/images/volkswagen-caddy.jpg`,
 ];
 
 self.addEventListener("install", function (event) {

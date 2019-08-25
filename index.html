@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>車牌風水</title>
     <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    <p>車牌風水</p>
-    <label>車牌:</label>
-    <input type="text" name="carplate" id="carplate"/>
-    <button id="submit" onclick="onButtonClick()">Submit</button>
-    <p id="result"></p>
+    <div class="container">
+      <div id="title-info-container">
+        <h1 id="title">車牌風水</h1>
+        <a href="info/info.html">凶車資訊</a>
+      </div>
+      <div id="car-plate-info">
+        <label>車牌:</label>
+        <input type="text" name="carplate" id="carplate"/>
+      </div>
+      <button id="submit" onclick="onButtonClick()">Submit</button>
+      <p id="result"></p>
+    </div>
   </body>
 </html>
